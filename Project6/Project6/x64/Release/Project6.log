@@ -1,0 +1,10 @@
+﻿  Source.cpp
+  bull.cpp
+  enemy1.cpp
+  player.cpp
+enemy1.obj : error LNK2005: "float yz" (?yz@@3MA) already defined in bull.obj
+enemy1.obj : error LNK2005: "float xs" (?xs@@3MA) already defined in bull.obj
+Source.obj : error LNK2005: "float yz" (?yz@@3MA) already defined in bull.obj
+Source.obj : error LNK2005: "float xs" (?xs@@3MA) already defined in bull.obj
+Source.obj : error LNK2005: "float gz" (?gz@@3MA) already defined in bull.obj
+C:\Users\Shenge\source\repos\Project6\x64\Release\Project6.exe : fatal error LNK1169: one or more multiply defined symbols found
