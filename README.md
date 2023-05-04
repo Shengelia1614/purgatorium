@@ -1,6 +1,7 @@
 # purgatorium
 
 my first real project ever
+
 library used: SFML
 
 for whatevere reason when creating classes functions wouldnt work if i put them in .cpp file so instead they are all in header files
