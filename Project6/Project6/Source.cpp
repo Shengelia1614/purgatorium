@@ -40,7 +40,7 @@ bool gethit(player& c, enemy1& a, vector<bull>& b) {
 
 int main() {
 	Texture texture;
-	texture.loadFromFile("C:/Users/Shenge/source/repos/Project6/Project6/Game-Over.png");
+	texture.loadFromFile("Game-Over.png");
 	Sprite sprite;
 	sprite.setTexture(texture);
 	sprite.setScale(Vector2f(4.f, 4.f));
@@ -48,7 +48,7 @@ int main() {
 
 	
 	//window = new RenderWindow(600,800, "aia", Style::Titlebar | Style::Close);
-	RenderWindow window(VideoMode(800, 600), "spaceBullet", Style::Titlebar | Style::Close);
+	RenderWindow window(VideoMode(800, 600), "purgatorium", Style::Titlebar | Style::Close);
 	window.setFramerateLimit(75);
 	//RenderTarget::clear()
 
@@ -64,12 +64,21 @@ int main() {
 	int GameOver{0};
 
 
+	sf::Music music,go;
+	music.openFromFile("ff.wav");
+	//go.openFromFile("go.wav");
+	music.play();
+	music.setLoop(1);
+	//if (GameOver >= 1) {
+	//	go.play();
+	//	go.setLoop(1);
 
+	//}
 
 
 	while (window.isOpen()) {
 		Time elaps = clock.getElapsedTime();
-
+		
 
 		window.clear(Color::Black);
 		while (window.pollEvent(ev))
@@ -159,6 +168,8 @@ int main() {
 		if (GameOver >= 1) {
 			window.clear(Color::Black);
 			window.draw(sprite);
+			music.pause();
+		//	go.play();
 		}
 
 
